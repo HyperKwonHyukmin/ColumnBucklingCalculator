@@ -6,7 +6,7 @@
   public class BucklingInput
   {
     public double SafetyFactor { get; set; } = 3.0;     // 사용하중 안전율
-    public MemberProfile Member { get; set; }           // 선택된 부재
+    public required MemberProfile Member { get; set; }  // 선택된 부재
     public double ElasticModulus { get; set; } = 210000;// 탄성계수 E [MPa]
     public double YieldStress { get; set; } = 240;      // 항복응력 Fy [MPa]
     public double Length { get; set; }                  // 기둥 길이 L [mm]

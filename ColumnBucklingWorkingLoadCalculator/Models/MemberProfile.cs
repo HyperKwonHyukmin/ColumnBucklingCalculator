@@ -5,7 +5,7 @@
   /// </summary>
   public class MemberProfile
   {
-    public string Name { get; set; }
+    public required string Name { get; set; }
     public double Area { get; set; }             // 단면적 A [mm^2]
     public double MomentOfInertia { get; set; }  // 관성모멘트 I [mm^4]
     public double RadiusOfGyration { get; set; } // 회전반경 r [mm]

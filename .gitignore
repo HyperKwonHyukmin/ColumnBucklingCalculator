@@ -1,0 +1,45 @@
+# ===== Build Output =====
+bin/
+obj/
+
+# ===== IDE =====
+.vs/
+*.user
+*.suo
+*.userprefs
+*.pidb
+*.userosscache
+*.sln.docstates
+.vscode/
+.idea/
+
+# ===== .NET =====
+*.dll
+*.exe
+*.pdb
+*.cache
+*.sourcelink.json
+*.FileListAbsolute.txt
+*.AssemblyInfoInputs.cache
+*.CoreCompileInputs.cache
+*.AssemblyInfo.cs
+apphost.exe
+singlefilehost.exe
+
+# ===== Environment =====
+.env
+appsettings.local.json
+appsettings.*.local.json
+secrets.json
+
+# ===== Logs =====
+*.log
+logs/
+
+# ===== OS =====
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ===== Custom =====
+.claude/settings.local.json

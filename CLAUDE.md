@@ -8,14 +8,20 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 # Build
 dotnet build
 
-# Run (interactive)
-dotnet run
-
-# Run with arguments: [member_name] [column_length_mm] [eccentricity_ratio]
-dotnet run -- "300A PIPE" 4470 0.25
+# Run: exe input.json output.json
+dotnet run -- input.json output.json
 
 # Release build
 dotnet publish -c Release
+```
+
+### input.json example
+```json
+{
+  "memberName": "300A PIPE",
+  "columnLengthMm": 4470,
+  "eccentricityRatio": 0.25
+}
 ```
 
 There are no tests in this project.
@@ -55,4 +61,4 @@ Four categories: H-profiles, Pipe sections (PIPE), I.A sections (asymmetric, use
 
 ### Output Format
 
-Output is a single decimal place value (`:F1`) in metric tons, formatted for machine parsing by an external Python server.
+`output.json` contains `input`, `memberProfile`, `intermediateValues`, `result`, `error` 섹션. `result.maxWorkingLoadTon`이 소수점 1자리 ton 값. 에러 시 `error.code`와 `error.message`만 채워지고 나머지는 null.
